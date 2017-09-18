@@ -1,19 +1,30 @@
-/**
-* Package for calculate task.
-*
-* @author Mikhail Krasikov (mailto:mishrkas@mail.ru)
-* @version $Id$
-* @since 0.1
-*/
 package ru.job4j;
 
+/**
+ * Calculate.
+ *
+ * @author Mikhail Krasikov (mailto:mishrkas@mail.ru)
+ * @version $Id$
+ * @since 0.1
+ */
 public class Calculate {
-	 /**
-     * Main.
-     * @param args - args.
-     */
+	/**
+	 * Main.
+	 * @param args - args.
+	 */
     public static void main(String[] args) {
         System.out.println("Hello World");
     }
 	
+	public String echo(String name) {
+	/**
+	 * Method echo.
+	 * @param name Your name.
+	 * @return Echo plus your name.
+	 */
+    return "Echo, echo, echo : " + name;
+	}
 }
+
+
+ 
