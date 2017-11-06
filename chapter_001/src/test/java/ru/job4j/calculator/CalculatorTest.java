@@ -14,4 +14,31 @@ public class CalculatorTest {
         double expected = 2D;
         assertThat(result, is(expected));
     }
+
+    @Test
+    public void whenSubstructTreeMinusOneThenTwo() {
+        Calculator calc = new Calculator();
+        calc.subtract(3D, 1D);
+        double result = calc.getResult();
+        double expected = 2D;
+        assertThat(result, is(expected));
+    }
+
+    @Test
+    public void whenDivSixDivideTreeThenTwo() {
+        Calculator calc = new Calculator();
+        calc.div(6D, 3D);
+        double result = calc.getResult();
+        double expected = 2D;
+        assertThat(result, is(expected));
+    }
+
+    @Test
+    public void whenMultipleTwoMultipleOneThenTwo() {
+        Calculator calc = new Calculator();
+        calc.subtract(2D, 1D);
+        double result = calc.getResult();
+        double expected = 2D;
+        assertThat(result, is(expected));
+    }
 }
