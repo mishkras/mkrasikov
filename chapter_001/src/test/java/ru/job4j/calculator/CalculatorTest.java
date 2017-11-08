@@ -5,7 +5,17 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
+/**
+ * CalculatorTest.
+ *
+ * @author Mikhail Krasikov (mailto:mishkras@mail.ru)
+ * @version $Id$
+ * @since 0.1
+ */
 public class CalculatorTest {
+    /**
+     * Test sum.
+     */
     @Test
     public void whenAddOnePlusOneThenTwo() {
         Calculator calc = new Calculator();
@@ -14,7 +24,9 @@ public class CalculatorTest {
         double expected = 2D;
         assertThat(result, is(expected));
     }
-
+    /**
+     * Test substruct.
+     */
     @Test
     public void whenSubstructTreeMinusOneThenTwo() {
         Calculator calc = new Calculator();
@@ -23,7 +35,9 @@ public class CalculatorTest {
         double expected = 2D;
         assertThat(result, is(expected));
     }
-
+    /**
+     * Test div.
+     */
     @Test
     public void whenDivSixDivideTreeThenTwo() {
         Calculator calc = new Calculator();
@@ -34,9 +48,12 @@ public class CalculatorTest {
     }
 
     @Test
+    /**
+     * Test multiple.
+     */
     public void whenMultipleTwoMultipleOneThenTwo() {
         Calculator calc = new Calculator();
-        calc.subtract(2D, 1D);
+        calc.multiple(2D, 1D);
         double result = calc.getResult();
         double expected = 2D;
         assertThat(result, is(expected));

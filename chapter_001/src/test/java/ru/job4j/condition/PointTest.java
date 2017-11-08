@@ -5,7 +5,17 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
+/**
+ * PointTest.
+ *
+ * @author Mikhail Krasikov (mailto:mishkras@mail.ru)
+ * @version $Id$
+ * @since 0.1
+ */
 public class PointTest {
+    /**
+     * Test point.
+     */
     @Test
     public void whenPointOnLineThenTrue() {
         //create of new point.

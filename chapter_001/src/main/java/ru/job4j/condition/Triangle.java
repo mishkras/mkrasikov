@@ -1,5 +1,12 @@
 package ru.job4j.condition;
 
+/**
+ * Calculate.
+ *
+ * @author Mikhail Krasikov (mailto:mishrkas@mail.ru)
+ * @version $Id$
+ * @since 0.1
+ */
 public class Triangle {
     private Point a;
     private Point b;
@@ -10,30 +17,32 @@ public class Triangle {
         this.b = b;
         this.c = c;
     }
+
     /**
      * Метод должен вычислять расстояние между точками left и right.
-     *
+     * <p>
      * Для вычисления расстояния использовать формулу.
      * √(xb - xa)^2 + (yb - ya)^2
-     *
+     * <p>
      * где √ - корень квадратный, для извлечения корня использовать метод Math.sqrt().
-     *
+     * <p>
      * ^ - степень.
      *
-     * @param left Точка слева
+     * @param left  Точка слева
      * @param right Точка с права.
      * @return расстояние между точками left и right.
      */
     public double distance(Point left, Point right) {
 
-        double distance = Math.sqrt((x*b - x*a)^2 + (y*b - y*a)^2);
-        return distance;
+        double dist = Math.sqrt(Math.pow(left.getX() - right.getX(), 2) + Math.pow(left.getY() - right.getY(), 2));
+        return dist;
     }
+
     /**
      * Метод вычисления периметра по длинам сторон.
-     *
+     * <p>
      * Формула.
-     *
+     * <p>
      * (ab + ac + bc) / 2
      *
      * @param ab расстояние между точками a b
@@ -42,35 +51,40 @@ public class Triangle {
      * @return Перимент.
      */
     public double period(double ab, double ac, double bc) {
-        double lengthsOfSides = (a*b + a*c + b*c)/2;
-        return lengthsOfSides;
+        ab = this.distance(this.a, this.b);
+        ac = this.distance(this.a, this.c);
+        bc = this.distance(this.b, this.c);
+        return (ab + ac + bc) / 2;
     }
+
     /**
      * Метод должен вычислить прощадь треугольканива.
-     *
+     * <p>
      * Формула.
-     *
+     * <p>
      * √ p *(p - ab) * (p - ac) * (p - bc)
-     *
+     * <p>
      * где √ - корень квадратный, для извлечения корня использовать метод Math.sqrt().
      *
      * @return Вернуть прощадь, если треугольник существует или -1.
      */
     public double area() {
-        double rsl = Math.sqrt(p*(p - a*b) * (p - a*c) * (p - b*c));
+        double rls = -1;
         double ab = this.distance(this.a, this.b);
         double ac = this.distance(this.a, this.c);
         double bc = this.distance(this.b, this.c);
         double p = this.period(ab, ac, bc);
+
         if (this.exist(ab, ac, bc)) {
             // написать формулу для расчета площади треугольника.
-            //rsl = ...
+            rls = Math.sqrt(p * (p - ab) * (p - ac) * (p - bc));
         }
-        return rsl;
+        return rls;
     }
+
     /**
      * Метод проверяет можно ли построить треугольник с такими длинами сторон.
-     *
+     * <p>
      * Подумайте какое надо написать условие, чтобы определить можно ли построить треугольник.
      *
      * @param ab Длина от точки a b.
@@ -79,7 +93,16 @@ public class Triangle {
      * @return
      */
     private boolean exist(double ab, double ac, double bc) {
-        return false;
-    }
+        ab = this.distance(this.a, this.b);
+        ac = this.distance(this.a, this.c);
+        bc = this.distance(this.b, this.c);
 
+        if (ab + ac > bc) {
+            return true;
+        } else if (ab + bc > ac) {
+            return true;
+        } else if (ac + bc > ab) {
+            return true;
+        } else return false;
+    }
 }

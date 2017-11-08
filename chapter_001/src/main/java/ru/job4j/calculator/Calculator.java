@@ -1,5 +1,13 @@
 package ru.job4j.calculator;
 
+/**
+ * Calculator.
+ *
+ * @author Mikhail Krasikov (mailto:mishrkas@mail.ru)
+ * @version $Id$
+ * @since 0.1
+ */
+
 public class Calculator {
     private double result;
 
