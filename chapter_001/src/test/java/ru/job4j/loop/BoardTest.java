@@ -22,7 +22,7 @@ public class BoardTest {
         Board board = new Board();
         String result = board.paint(3, 3);
         final String line = System.getProperty("line.separator");
-        String expected = "x x" + "\r\n" + " x " + "\r\n" + "x x" + "\r\n";
+        String expected = String.format("x x%s x %sx x%s", line, line, line);
         assertThat(result, is(expected));
     }
     /**
@@ -33,7 +33,7 @@ public class BoardTest {
         Board board = new Board();
         String result = board.paint(5, 4);
         final String line = System.getProperty("line.separator");
-        String expected = "x x x" + "\r\n" + " x x " + "\r\n" + "x x x" + "\r\n" + " x x " + "\r\n";
+        String expected = String.format("x x x%s x x %sx x x%s x x %s", line, line, line, line);
         assertThat(result, is(expected));
 //напишите здесь тест, проверяющий формирование доски 5 на 4.
     }

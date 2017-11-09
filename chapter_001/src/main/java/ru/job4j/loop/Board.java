@@ -19,7 +19,6 @@ public class Board {
         String addX = "x";
         String addSpace = " ";
         String lineSerporator = "\r\n";
-        int result = 0;
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 if (i % 2 == 0 && j % 2 == 0) {
@@ -33,7 +32,6 @@ public class Board {
                 }
             }
             sb.append(lineSerporator);
-
         }
         return sb.toString();
     }
