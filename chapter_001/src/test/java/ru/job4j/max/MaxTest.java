@@ -14,7 +14,7 @@ import static org.junit.Assert.assertThat;
 
 public class MaxTest {
     /**
-     * Test max.
+     * Test max from two values.
      */
     @Test
     public void whenFirstLessSecond() {
@@ -22,7 +22,9 @@ public class MaxTest {
         int result = maxim.max(1, 2);
         assertThat(result, is(2));
     }
-
+    /**
+     * Test max from three values.
+     */
     @Test
     public void whenFirstLessSecondLessTird() {
         Max maxim = new Max();
