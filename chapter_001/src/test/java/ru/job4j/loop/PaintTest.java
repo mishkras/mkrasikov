@@ -29,7 +29,6 @@ public class PaintTest {
     /**
      * Test piramid h = 3.
      */
-    //" ^ " + "\n" + "^^^" + "\n" + "^^^^^" + "\n"
     @Test
     public void whenPiramidWithHeightThreeThenStringWithThreeRows() {
         Paint paint = new Paint();
