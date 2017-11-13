@@ -24,7 +24,7 @@ public class Paint {
                     sb.append(" ");
                 }
             }
-            sb.append("\r\n");
+            sb.append(System.getProperty("line.separator"));
         }
         return sb.toString();
     }
