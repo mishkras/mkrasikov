@@ -14,9 +14,7 @@ import static org.junit.Assert.assertThat;
  * @since 0.1
  */
 public class TurnTest {
-    /**
-     * Test Turn {2, 6, 1, 4}.
-     */
+
     @Test
     public void whenTurnArrayWithEvenAmountOfElementsThenTurnedArray() {
         Turn turn = new Turn();
