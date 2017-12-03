@@ -6,7 +6,6 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 /**
- *
  * RotateArrayTest.
  *
  * @author Mikhail Krasikov (mailto:mishkras@mail.ru)
@@ -15,16 +14,24 @@ import static org.junit.Assert.assertThat;
  */
 public class RotateArrayTest {
     /**
-     * Test Turn {1, 5, 4, 2, 3, 1, 7, 8, 0, 5}.
+     * Test RotateArray {{1, 2}, {3, 4}}.
      */
     @Test
     public void whenRotateTwoRowTwoColArrayThenRotatedArray() {
         RotateArray ra = new RotateArray();
-        ra = {[][], [][], [][], [][]}//напишите здесь тест, проверяющий поворот массива размером 2 на 2.
+        int[][] matrix = {{1, 2}, {3, 4}};
+        int[][] result = {{1, 2}, {3, 4}};
+        assertThat(ra.rotate(matrix), is(result));//напишите здесь тест, проверяющий поворот массива размером 2 на 2.
     }
 
+    /**
+     * Test RotateArray {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}.
+     */
     @Test
     public void whenRotateThreeRowThreeColArrayThenRotatedArray() {
-        //напишите здесь тест, проверяющий поворот массива размером 3 на 3.
+        RotateArray ra = new RotateArray();
+        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        int[][] result = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        assertThat(ra.rotate(matrix), is(result));//напишите здесь тест, проверяющий поворот массива размером 3 на 3.
     }
 }

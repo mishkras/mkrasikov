@@ -16,12 +16,12 @@ public class RotateArray {
      * @return sort array.
      */
     public int[][] rotate(int[][] array) {
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length; j++) {
-                array[i][j] = array[j][array.length - i - 1];
+        int[][] matrix = new int[array.length][array.length];
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 0; j < array.length - 1; j++) {
+                matrix[i][j] = array[j][array.length - i - 1];
             }
         }
         return array;
     }
-
 }
