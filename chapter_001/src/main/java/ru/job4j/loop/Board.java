@@ -10,7 +10,8 @@ package ru.job4j.loop;
 public class Board {
     /**
      * int add.
-     * @param width - board width.
+     *
+     * @param width  - board width.
      * @param height - board height.
      * @return grafic picture of the board.
      */
@@ -23,11 +24,9 @@ public class Board {
             for (int j = 0; j < width; j++) {
                 if (i % 2 == 0 && j % 2 == 0) {
                     sb.append(addX);
-                }
-                else if(i % 2 != 0 && j % 2 != 0){
+                } else if (i % 2 != 0 && j % 2 != 0) {
                     sb.append(addX);
-                }
-                else {
+                } else {
                     sb.append(addSpace);
                 }
             }

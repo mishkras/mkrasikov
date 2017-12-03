@@ -26,10 +26,6 @@ public class Point {
     }
 
     public boolean is(int a, int b) {
-        if (y == a * x + b) {
-            return true;
-        } else {
-            return false;
-        }
+        return (y == a * x + b);
     }
 }

@@ -9,7 +9,7 @@ package ru.job4j.loop;
  */
 public class Counter {
 
-    public int add(int start, int finish){
+    public int add(int start, int finish) {
         /**
          * int add.
          * @param start - first number.
@@ -18,9 +18,9 @@ public class Counter {
          */
         int sum = 0;
         for (int i = start; i <= finish; i++) {
-             if(i%2 == 0){
-                 sum += i;
-             }
+            if (i % 2 == 0) {
+                sum += i;
+            }
         }
         return sum;
     }

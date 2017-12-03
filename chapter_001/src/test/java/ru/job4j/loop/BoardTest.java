@@ -25,10 +25,11 @@ public class BoardTest {
         String expected = String.format("x x%s x %sx x%s", line, line, line);
         assertThat(result, is(expected));
     }
+
     /**
      * Test board 5x5.
      */
-   @Test
+    @Test
     public void whenPaintBoardWithWidthFiveAndHeightFourThenStringWithFiveColsAndFourRows() {
         Board board = new Board();
         String result = board.paint(5, 4);

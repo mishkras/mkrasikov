@@ -24,6 +24,7 @@ public class CalculatorTest {
         double expected = 2D;
         assertThat(result, is(expected));
     }
+
     /**
      * Test substruct.
      */
@@ -35,6 +36,7 @@ public class CalculatorTest {
         double expected = 2D;
         assertThat(result, is(expected));
     }
+
     /**
      * Test div.
      */

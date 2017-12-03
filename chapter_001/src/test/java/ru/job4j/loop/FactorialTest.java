@@ -17,13 +17,15 @@ public class FactorialTest {
     public void whenCalculateFactorialForFiveThenOneHundreedTwenty() {
         Factorial factorial = new Factorial();
         int fact = factorial.calc(5);
-        assertThat(fact, is(120));//напишите здесь тест, проверяющий, что факториал для числа 5 равен 120.
+        assertThat(fact, is(120));
+        //напишите здесь тест, проверяющий, что факториал для числа 5 равен 120.
     }
 
     @Test
     public void whenCalculateFactorialForZeroThenOne() {
         Factorial factorial = new Factorial();
         int fact = factorial.calc(0);
-        assertThat(fact, is(1));//напишите здесь тест, проверяющий, что факториал для числа 0 равен 1.
+        assertThat(fact, is(1));
+        //напишите здесь тест, проверяющий, что факториал для числа 0 равен 1.
     }
 }

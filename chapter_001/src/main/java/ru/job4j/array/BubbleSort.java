@@ -1,7 +1,6 @@
 package ru.job4j.array;
 
 /**
- *
  * BubbleSort.
  *
  * @author Mikhail Krasikov (mailto:mishkras@mail.ru)

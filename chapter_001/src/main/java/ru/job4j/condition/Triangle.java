@@ -101,10 +101,7 @@ public class Triangle {
             return true;
         } else if (ab + bc > ac) {
             return true;
-        } else if (ac + bc > ab) {
-            return true;
-        } else {
-            return false;
         }
+        return (ac + bc > ab);
     }
 }

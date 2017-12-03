@@ -21,7 +21,8 @@ public class RotateArrayTest {
         RotateArray ra = new RotateArray();
         int[][] matrix = {{1, 2}, {3, 4}};
         int[][] result = {{1, 2}, {3, 4}};
-        assertThat(ra.rotate(matrix), is(result));//напишите здесь тест, проверяющий поворот массива размером 2 на 2.
+        assertThat(ra.rotate(matrix), is(result));
+        //напишите здесь тест, проверяющий поворот массива размером 2 на 2.
     }
 
     /**
@@ -32,6 +33,7 @@ public class RotateArrayTest {
         RotateArray ra = new RotateArray();
         int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         int[][] result = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        assertThat(ra.rotate(matrix), is(result));//напишите здесь тест, проверяющий поворот массива размером 3 на 3.
+        assertThat(ra.rotate(matrix), is(result));
+        //напишите здесь тест, проверяющий поворот массива размером 3 на 3.
     }
 }

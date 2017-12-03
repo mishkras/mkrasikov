@@ -7,6 +7,7 @@ package ru.job4j.max;
  * @version $Id$
  * @since 0.1
  */
+
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
@@ -22,6 +23,7 @@ public class MaxTest {
         int result = maxim.max(1, 2);
         assertThat(result, is(2));
     }
+
     /**
      * Test max from three values.
      */
