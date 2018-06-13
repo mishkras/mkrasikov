@@ -10,7 +10,7 @@ package ru.job4j.array;
 public class Check {
     /**
      * Заполняет массив квадратом чисел.
-     * @param data - массив булевых значеиий..
+     * @param data - массив булевых значеиий.
      */
     public boolean mono(boolean[] data) {
         boolean result = false;
