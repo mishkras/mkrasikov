@@ -6,7 +6,7 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 /**
- * ЬфекшчTest.
+ * MatrixTest.
  *
  * @author Mikhail Krasikov (mailto:mishkras@mail.ru)
  * @version $Id$
