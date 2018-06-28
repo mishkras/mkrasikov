@@ -9,7 +9,7 @@ package ru.job4j.array;
  */
 public class MatrixCheck {
     /**
-     * Проверяет. что слово начинается с префикса.
+     * Квадратный массив заполнен true или false по диагоналям.
      *
      * @param data матрица.
      * @return таблица умножения.
@@ -20,10 +20,17 @@ public class MatrixCheck {
             for (int j = 0; j < data.length; j++) {
                 if (i == j && data[i][j] == true) {
                     result = true;
+                } else if (i == j && data[i][j] == false) {
+                    result = true;
+                } else if (data[i][data.length - i - 1] == true) {
+                    result = true;
+                } else if (data[i][data.length - i - 1] == false) {
+                    result = true;
                 } else {
                     result = false;
                 }
             }
+
         }
         return result;
     }
