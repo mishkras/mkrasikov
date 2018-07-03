@@ -80,4 +80,21 @@ public class MatrixCheckTest {
         boolean result = check.mono(input);
         assertThat(result, is(false));
     }
+
+    /**
+     * Test matrix = {true, true, true},
+     * {true, true, true},
+     * {true, true, true}.
+     */
+    @Test
+    public void whenDataNotMonoByTrueThenTrue() {
+        MatrixCheck check = new MatrixCheck();
+        boolean[][] input = new boolean[][]{
+                {true, true, true},
+                {true, true, true},
+                {true, true, true}
+        };
+        boolean result = check.mono(input);
+        assertThat(result, is(true));
+    }
 }
