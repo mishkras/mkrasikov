@@ -19,15 +19,12 @@ public class ArrayChar {
     public boolean startWith(String prefix) {
         boolean result = true;
         char[] value = prefix.toCharArray();
-        for (int i = 0; i < data.length; i++) {
-            for (int j = 0; j < value.length; j++) {
-                if (data.equals(value)) {
-                    result = true;
-                } else {
-                    result = false;
-                }
+        for (int i = 0; i < value.length; i++) {
+            if (data[i] != value[i]) {
+                result = false;
+                break;
             }
-        }// проверить. что массив data имеет первые элементы одинаковые с value
+        }
         return result;
     }
 }
